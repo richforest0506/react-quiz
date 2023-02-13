@@ -53,7 +53,6 @@ const Quiz = () => {
       // show next question
       setActiveQuestion(activeQuestion + 1)
     }
-    console.log('activeQuestion === 0', activeQuestion === 0)
   }
   const onClickPrev = () => {
     // doing nothing when there is no previous question

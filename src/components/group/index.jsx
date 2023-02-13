@@ -6,7 +6,6 @@ const chars = ['A', 'B', 'C', 'D']
 const Group = ({ question, length, setSelectedAnswer, selectedAnswer }) => {
   const onAnswerClick = (e) => {
     setSelectedAnswer(e.target.id)
-    console.log('e.target.id', e.target.id)
   }
 
   return <div className='group-wrapper'>
