@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Group from '../group'
 import Buttons from '../buttons'
+import { useNavigate } from 'react-router-dom'
 
 const Quiz = () => {
   const [activeQuestion, setActiveQuestion] = useState(0)
@@ -378,11 +379,33 @@ const Quiz = () => {
     }
   ]
 
+  const mostFrequent = (arr) => {
+    const n = arr.length
+    // Insert all elements in hash.
+    const hash = new Map()
+    for (let i = 0; i < n; i++) {
+      if (hash.has(arr[i])) { hash.set(arr[i], hash.get(arr[i]) + 1) } else { hash.set(arr[i], 1) }
+    }
+
+    // find the max frequency
+    let maxCount = 0; let res = -1
+    hash.forEach((value, key) => {
+      if (maxCount < value) {
+        res = key
+        maxCount = value
+      }
+    })
+
+    return res
+  }
+
   const calculateResult = () => {
     // implement calculation logic
-    
-    return ''
+    const { navigate } = useNavigate()
+    const result = mostFrequent(answerList)
+    navigate('/result', { state: { result } })
   }
+
   const onClickNext = () => {
     // when user reached the last question, then go to calculation page
     if (activeQuestion === questions.length - 1) {
