@@ -1,0 +1,65 @@
+label.answers {
+  display: block;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 0.0625rem solid #ccd6e0;
+  border-radius: 0.25rem;
+  padding: 0.8125rem 1rem;
+  transition: border-color 350ms cubic-bezier(.25,.46,.45,.94),box-shadow 350ms cubic-bezier(.215,.61,.355,1);
+  margin-bottom: 0.5rem;
+}
+
+label.answers.selected {
+  border-color: #ec6584;
+}
+
+label.answers input {
+  display: none;
+}
+
+label.answers span {
+  pointer-events: none;
+}
+
+label.answers span.label {
+  width: 1.5rem;
+  margin-right: 0.75rem;
+  text-transform: uppercase;
+  transition: color 350ms cubic-bezier(.215,.61,.355,1),background-color 350ms cubic-bezier(.215,.61,.355,1);
+  height: 1.5rem;
+  justify-content: center;
+  border-radius: 0.125rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+label.answers.selected span.label {
+  background-color: #ec6584;
+  color: #fff;
+}
+
+label.answers.selected span.content {
+  font-weight: bold;
+}
+
+.group-wrapper {
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 2.5rem;
+  background-color: #f5f7f9;
+}
+
+.question-id {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-family: DM Sans, Helvetica Neue, helvetica, arial, sans-serif;
+}
+
+.question-name {
+  margin-bottom: 1.5rem;
+  font-family: Lora,timesnewroman, Times New Roman, times, baskerville, georgia, serif;
+  font-size: larger;
+}
