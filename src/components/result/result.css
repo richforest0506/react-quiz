@@ -1,0 +1,28 @@
+.result {
+  background-color: #f5f7f9;
+  width: 80%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-header {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  font-family: Lora, timesnewroman, Times New Roman, times, baskerville, georgia, serif;
+  font-style: italic;
+  padding: 1.5rem 0;
+}
+
+.result-title {
+  padding: 0 0 1.5rem 0;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  font-family: Lora, timesnewroman, Times New Roman, times, baskerville, georgia, serif;
+}
+
+.result-content {
+  padding: 1rem;
+}
