@@ -7,7 +7,7 @@ const Quiz = () => {
   const [activeQuestion, setActiveQuestion] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState(-1)
   const [answerList, setAnswerList] = useState([])
-  const { navigate } = useNavigate()
+  const navigate = useNavigate()
 
   const questions = [
     {
