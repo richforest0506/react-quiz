@@ -6,7 +6,6 @@ const Quiz = () => {
   const [activeQuestion, setActiveQuestion] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState(-1)
   const [answerList, setAnswerList] = useState([])
-  const [showResult, setShowResult] = useState(false)
 
   const questions = [
     {
@@ -381,7 +380,7 @@ const Quiz = () => {
 
   const calculateResult = () => {
     // implement calculation logic
-    showResult(true)
+    
     return ''
   }
   const onClickNext = () => {
