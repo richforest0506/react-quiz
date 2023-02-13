@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Group from '../group'
-import Buttons from '../buttons'
+// import Buttons from '../buttons'
 import { useNavigate } from 'react-router-dom'
+import Button from '../button'
 
 const Quiz = () => {
   const [activeQuestion, setActiveQuestion] = useState(0)
@@ -422,6 +423,7 @@ const Quiz = () => {
       // show next question
       setActiveQuestion(activeQuestion + 1)
     }
+    console.log('activeQuestion === 0', activeQuestion === 0)
   }
   const onClickPrev = () => {
     // doing nothing when there is no previous question
@@ -435,13 +437,10 @@ const Quiz = () => {
 
   return <div>
     <Group question={questions[activeQuestion]} length={questions.length} setSelectedAnswer={setSelectedAnswer} selectedAnswer={selectedAnswer} ></Group>
-    <Buttons
-      onClickNext={onClickNext}
-      onClickPrev={onClickPrev}
-      prevDisabled={activeQuestion === 0}
-      nextDisabled={selectedAnswer < 0}
-      endReached={activeQuestion === questions.length - 1}
-    ></Buttons>
+    <div className='button-wrapper'>
+      {!(activeQuestion === 0) && <Button className='prev' onClick={onClickPrev} label='&lt; Previous' disabled={false} />}
+      <Button className={`next ${selectedAnswer < 0 ? 'disabled' : ''} ${activeQuestion === questions.length - 1 ? 'end' : ''}`} disabled={selectedAnswer < 0} onClick={onClickNext} label={`${activeQuestion === questions.length - 1 ? 'Finish test' : 'Next'} >`} />
+    </div>
   </div>
 }
 

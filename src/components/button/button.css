@@ -1,0 +1,36 @@
+button {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1.25rem 2.5rem 1.125rem;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.25rem;
+}
+
+button.prev {
+  background-color: #fff;
+  border: 1px solid #97a5b4;
+  color: #26313e;
+}
+
+button.next {
+  background-color: #0c2b4f;
+  border: 1px solid #0c2b4f;
+  color: #fff;
+}
+
+button.disabled {
+  background-color: #ccd6e0!important;
+  border-color: #ccd6e0!important;
+  color: #fff!important;
+  cursor: not-allowed;
+}
+
+button.end {
+  background-color: #ec6584;
+  border: 1px solid #ec6584;
+}

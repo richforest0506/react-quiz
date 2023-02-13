@@ -63,3 +63,7 @@ label.answers.selected span.content {
   font-family: Lora,timesnewroman, Times New Roman, times, baskerville, georgia, serif;
   font-size: larger;
 }
+
+.button-wrapper {
+  display: flex;
+}
