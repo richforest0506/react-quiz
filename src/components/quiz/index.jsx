@@ -7,6 +7,7 @@ const Quiz = () => {
   const [activeQuestion, setActiveQuestion] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState(-1)
   const [answerList, setAnswerList] = useState([])
+  const { navigate } = useNavigate()
 
   const questions = [
     {
@@ -401,7 +402,6 @@ const Quiz = () => {
 
   const calculateResult = () => {
     // implement calculation logic
-    const { navigate } = useNavigate()
     const result = mostFrequent(answerList)
     navigate('/result', { state: { result } })
   }

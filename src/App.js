@@ -1,11 +1,11 @@
 import React from 'react'
 import './App.css'
-import Quiz from './components/quiz'
+import Routers from './routes'
 
 function App () {
   return (
     <div className="App">
-      <Quiz></Quiz>
+      <Routers></Routers>
     </div>
   )
 }

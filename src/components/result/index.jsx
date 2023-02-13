@@ -1,9 +1,11 @@
 import React from 'react'
+import response from './response'
 
 const Result = () => {
   return <div>
     <div>Your Result</div>
-    <div>You are more of a public extrovert and private introvert</div>
+    <div>{response[0].title}</div>
+    <div>{response[0].description}</div>
   </div>
 }
 

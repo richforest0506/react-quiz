@@ -7,11 +7,11 @@ const Routers = () => {
   return <Router>
     <Routes>
       <Route
-        path='/quiz'
+        path='quiz'
         element={<QuizPage />}
       ></Route>
       <Route
-        path='/result'
+        path='result'
         element={<ResultPage />}
       ></Route>
     </Routes>
