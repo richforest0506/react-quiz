@@ -1,7 +1,6 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import response from './response'
-import './result.css'
 import Button from '../button'
 
 const Result = () => {
@@ -11,7 +10,7 @@ const Result = () => {
     navigate('/quiz')
   }
 
-  return <div className='result'>
+  return <div className='result wrapper'>
     <div className='result-header' data-test='result-header'>Your Result</div>
     <div className='result-title' data-test='result-title'>{response[location.state.result].title}</div>
     <div className='result-content' data-test='result-content'>{response[location.state.result].description}</div>

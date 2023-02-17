@@ -1,5 +1,4 @@
 import React from 'react'
-import './group.css'
 
 const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 

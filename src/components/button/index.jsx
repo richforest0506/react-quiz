@@ -1,5 +1,4 @@
 import React from 'react'
-import './button.css'
 
 const Button = (props) => {
   const { label, className, onClick, disabled = false, testId } = props

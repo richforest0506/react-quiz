@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Group from '../group'
-// import Buttons from '../buttons'
 import { useNavigate } from 'react-router-dom'
 import Button from '../button'
 import questions from './questions'
@@ -64,7 +63,7 @@ const Quiz = () => {
     }
   }
 
-  return <div>
+  return <div className='wrapper'>
     <Group question={questions[activeQuestion]} length={questions.length} setSelectedAnswer={setSelectedAnswer} selectedAnswer={selectedAnswer} ></Group>
     <div className='button-wrapper'>
       {!(activeQuestion === 0) && <Button className='prev' onClick={onClickPrev} label='&lt; Previous' />}
