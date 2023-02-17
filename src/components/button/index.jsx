@@ -1,8 +1,9 @@
 import React from 'react'
 import './button.css'
 
-const Button = ({ label, className, onClick, disabled = false }) => {
-  return <button onClick={onClick} className={className} disabled={disabled}>
+const Button = (props) => {
+  const { label, className, onClick, disabled = false, testId } = props
+  return <button onClick={onClick} className={className} disabled={disabled} data-test={testId}>
     { label }
   </button>
 }

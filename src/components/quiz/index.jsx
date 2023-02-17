@@ -67,7 +67,7 @@ const Quiz = () => {
   return <div>
     <Group question={questions[activeQuestion]} length={questions.length} setSelectedAnswer={setSelectedAnswer} selectedAnswer={selectedAnswer} ></Group>
     <div className='button-wrapper'>
-      {!(activeQuestion === 0) && <Button className='prev' onClick={onClickPrev} label='&lt; Previous' disabled={false} />}
+      {!(activeQuestion === 0) && <Button className='prev' onClick={onClickPrev} label='&lt; Previous' />}
       <Button className={`next ${selectedAnswer < 0 ? 'disabled' : ''} ${activeQuestion === questions.length - 1 ? 'end' : ''}`} disabled={selectedAnswer < 0} onClick={onClickNext} label={`${activeQuestion === questions.length - 1 ? 'Finish test' : 'Next'} >`} />
     </div>
   </div>

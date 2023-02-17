@@ -1,11 +1,12 @@
 import React from 'react'
 import './group.css'
 
-const chars = ['A', 'B', 'C', 'D']
+const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-const Group = ({ question, length, setSelectedAnswer, selectedAnswer }) => {
+const Group = (props) => {
+  const { question, length, setSelectedAnswer, selectedAnswer } = props
   const onAnswerClick = (e) => {
-    setSelectedAnswer(e.target.id)
+    setSelectedAnswer(parseInt(e.target.id))
   }
 
   return <div className='group-wrapper'>
@@ -14,10 +15,11 @@ const Group = ({ question, length, setSelectedAnswer, selectedAnswer }) => {
     <div>
       { question.answers?.map((val, index) => {
         return <label
-          className={`answers ${selectedAnswer === index.toString() ? 'selected' : ''}`}
+          className={`answers ${selectedAnswer === index ? 'selected' : ''}`}
           key={index}
           id={index}
           onClick={onAnswerClick}
+          data-test="question-group"
         >
           <span
             className='label'

@@ -3,3 +3,12 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+import Enzyme from "enzyme";
+import 'jest-enzyme';
+import '@testing-library/jest-dom/extend-expect'
+import Adapter from "@mnajdova/enzyme-adapter-react-18";
+import { createSerializer } from "enzyme-to-json";
+
+expect.addSnapshotSerializer(createSerializer({ mode: "deep"}))
+
+Enzyme.configure({ adapter: new Adapter() })
